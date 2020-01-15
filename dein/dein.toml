@@ -1,0 +1,157 @@
+[[plugins]]
+repo = 'morhetz/gruvbox'
+
+# [[plugins]]
+# repo = 'kana/vim-operator-user'
+
+# for linter
+[[plugins]]
+repo = 'dense-analysis/ale'
+hook_add  = '''
+source $HOME/dotfiles/dein/conf/ale.vim
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+merged = 0
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'junegunn/fzf'
+hook_add = '''
+source $HOME/dotfiles/dein/conf/fzf.vim
+'''
+
+# for async
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+depends = ['roxma/vim-hug-neovim-rpc'] # pynvim also (pip3 install pynvim)
+
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# depends = ['roxma/nvim-yarp', 'roxma/vim-hug-neovim-rpc']
+# hook_add = '''
+# let g:deoplete#enable_at_startup = 1
+# '''
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+hook_add = '''
+let g:neosnippet#snippets_directory='~/dotfiles/.vim/userconf/neosnippet'
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+repo = 'koka831/neosnippet-snippets'
+# branch = 'fix/e301'
+
+[[plugins]]
+repo = 'kshenoy/vim-signature'
+
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+depends = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+# for :mks
+[[plugins]]
+repo = 'tpope/vim-obsession'
+
+[[plugins]]
+repo = 'jsfaint/gen_tags.vim'
+hook_add = '''
+let g:gen_tags#ctags_auto_gen = 1
+let g:gen_tags#gtags_auto_gen = 1
+'''
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+hook_add = '''
+source $HOME/dotfiles/dein/conf/tagbar.vim
+'''
+
+# Quickfix highlighter
+[[plugins]]
+repo = 'jceb/vim-hier'
+hook_add = '''
+let g:hier_enabled = 1
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+depends = ['vim-fugitive']
+hook_add = '''
+source $HOME/dotfiles/dein/conf/airline.vim
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+set signcolumn=yes
+let g:gitgutter_sign_added = '・'
+let g:gitgutter_sign_modified = '・'
+let g:gitgutter_sign_removed = '・'
+let g:gitgutter_sign_modified_removed = '・'
+'''
+
+[[plugins]]
+repo = 'scrooloose/NERDTree'
+hook_add = '''
+let NERDTreeShowHidden=1
+'''
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+depends = ['NERDTree']
+hook_add = '''
+source $HOME/dotfiles/dein/conf/NERDTree.vim
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+depends = 'Shougo/vimproc.vim'
+hook_add = '''
+source $HOME/dotfiles/dein/conf/vim-quickrun.vim
+'''
+
+[[plugins]]
+repo = 'janko/vim-test'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'ap/vim-css-color'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'

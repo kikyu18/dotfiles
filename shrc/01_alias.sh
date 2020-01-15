@@ -1,0 +1,27 @@
+###################
+# command aliases #
+###################
+alias dc='docker-compose'
+alias g='git'
+# alias ga='git add --all'
+alias gc='git commit -v'
+alias gco='git branch -a | fzf | xargs git checkout'
+alias gs='git status -s'
+alias grm='git rm --cached `git ls-files --full-name -i --exclude-from=.gitignore`'
+alias git_remove_merged="git branch --merged | grep -vE '^\*|master$|develop$' | xargs -I % git branch -d %"
+alias l='exa -la'
+alias la='exa -abghHliS'
+alias tree='tree -C'
+alias t='tig'
+alias tmux='tmux -u'
+alias vi='vim'
+alias rng='ranger'
+alias sshc='ssh-change-color'
+alias c='cargo'
+alias rm='rm -i'
+alias https='http --default-scheme=https'
+alias green='tmux select-pane -P "bg=colour58"'
+alias black='tmux select-pane -P "bg=colour236"'
+alias dia='vim $HOME/src/github/doc/weekly/$(date "+%Y-%m-%d.md")'
+alias settings='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
+alias gl='ghq look $(ghq list | fzf)'

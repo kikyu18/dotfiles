@@ -1,0 +1,16 @@
+.DS_Store
+*~
+.*secret
+.config/*
+!.config/fish
+dein/.cache/*
+dein/cache_vi*
+dein/state_vi*
+dein/repos/*
+dein/temp/*
+.tmux/plugins/*
+.tmux/resurrect/*
+.vim/dein/repos/*
+vuls/*
+shrc/03_secret.sh
+fonts/
